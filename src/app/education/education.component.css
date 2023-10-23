@@ -1,0 +1,32 @@
+
+.text
+{
+    color: white;
+    border-right: 5px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    /* animation: 
+    typing 5s steps(18),
+    cursor .2s step-end infinite alternate; */
+    animation: typing 15s steps(23) infinite, cursor 20s infinite;
+    animation-fill-mode:forwards
+
+}
+@keyframes cursor
+{
+    0% { width:0 }
+  25% { width: 70% }
+  48% { width: 100% }
+  50% { width: 100% }
+  55% { width: 100% }
+  75% { width: 70%; }
+  85% { width: 30%; }
+  95% { width: 0; }
+}
+@keyframes typing {
+
+    from { 
+        width: 0
+    }
+    
+}

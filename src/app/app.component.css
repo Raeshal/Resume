@@ -1,0 +1,130 @@
+
+
+/* .bd-navbar {
+  display: block;
+    min-width: 4rem;
+    background-color: #161418;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+} */
+
+ /* ---------------colour for routes------------ */
+.element {
+    background: 
+      radial-gradient(
+        farthest-side at bottom left,
+        rgba(255, 0, 255, 0.5), 
+        transparent
+      ),
+      radial-gradient(
+        farthest-corner at bottom right,
+        rgba(255, 50, 50, 0.5), 
+        transparent 400px
+      );
+  }
+
+ 
+/* .sidenav
+{
+  height: 100%;
+width: 160px;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color:  #161418;
+overflow-x: hidden;
+padding-top: 20px;
+}
+ */
+
+nav{
+  
+  box-shadow: 50px 30px 10px -2px rgba(0,0,0,0.4);
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px !important;
+
+}
+
+li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+
+nav ul li 
+{
+  list-style: none;
+  display: block;
+  font-weight: 500;
+  color: #777;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 0.5s;
+}
+
+
+.routes
+{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 5px 5px;
+}
+.main
+{
+  display: flex;
+}
+.container {
+  color: #e5e5e5;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 30px 30px 10px -2px rgba(0,0,0,0.4);
+}
+
+
+
+nav ul li 
+{
+    list-style: none;
+   
+    color: #777;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+nav ul li::after
+{
+    content: ' ';
+    background: #f44566;
+    width: 70%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 32%;
+    transform: translate(-50% , -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+}
+nav ul li:hover
+{
+   color: #868181;
+}
+nav ul li:hover::after
+{
+    top: 50%;
+    opacity: 1;
+
+}

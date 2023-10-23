@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+.bd-masthead {
+    background: #666724;
+   
+    overflow: hidden;
+    font-size: 14px;
+
+} 
+
+.font{
+    font-family: var(--bs-font-monospace)!important;
+
+}
+.w-15
+{
+ width: 15% !important;
+}
+.container1 {
+    color: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 30px 30px 10px -2px rgba(0,0,0,0.4);
+  }
+  
+:root {
+    --color-bg: #1f1f38;
+    --color-bg-variant: #2c2c6c;
+    --color-primary: #4db5ff;
+    --color-primary-variant: rgba(77,181,255,.4);
+    --color-white: #fff;
+    --color-light: hsla(0,0%,100%,.6);
+    --transition: all 400ms ease;
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+  }

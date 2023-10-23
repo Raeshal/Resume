@@ -1,0 +1,156 @@
+
+.Kard span:nth-child(1)
+{
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right , transparent, #FFFF00);
+    animation: animate12 2s linear infinite;
+}
+
+@keyframes animate12 {
+ 
+    0%
+    {
+        transform: translateX(-60%);
+    }
+
+     100%
+    {
+        transform: translateX(60%);
+    }
+}
+
+.Kard span:nth-child(2)
+{
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 2px;
+    height: 60%;
+    background: linear-gradient(to bottom , transparent, #FFFF00);
+    animation: animate13 2s linear infinite;
+}
+
+
+
+
+.box
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* width:50%;
+    height: 100% !important; */
+    overflow: hidden; 
+    animation-name: grow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+  }
+  
+  /* @keyframes grow {
+    0% {
+        background:  #666724;
+    }
+  
+    100%,50% {
+      background:  #f0f330;
+    }
+  }
+  
+ */
+
+
+
+.box span{
+    position:absolute;
+    inset: 90px;
+    background: black;
+    border-radius: 70px;
+    z-index: 1;
+}
+
+ 
+@keyframes animate {
+    
+    0%
+    {
+        transform: linear(0deg);
+    }
+
+   100%
+    {
+        transform: linear-gradient(180deg);
+    }
+    
+} 
+
+.callout {
+    grid-area: callout;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+@media (min-width: 700px)
+{
+.callout-title {
+    animation-delay: 0s;
+}
+.callout-title {
+    margin-bottom: 0;
+    animation-delay: 0.25s;
+    font-size: 4rem;
+    font-size: min(14vw, 4rem);
+}
+}
+
+.container {
+    color: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 30px 30px 10px -2px rgba(0,0,0,0.4);
+  }
+
+
+  .container {
+    margin: 0 auto;
+    width: 75%;
+    width: var(--container-width-lg);
+}
+.about__container {
+    grid-gap: 15%;
+    display: grid;
+    gap: 15%;
+    grid-template-columns: 35% 50%;
+}
+.about__cards {
+    grid-gap: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.about__card {
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+.about__icon {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+ 
