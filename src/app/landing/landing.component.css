@@ -1,137 +1,76 @@
 
-body {
-   
-    background-color: #666724;
-    
-  }
-  p {
-    text-shadow: 0 0 7px rgba(85, 83, 83, 0.3), 0 0 3px rgba(10, 10, 10, 0.3);
-  }
 
- 
-  .container {
-    color: #e5e5e5;
-    text-transform: uppercase;
-    box-shadow: 30px 30px 10px -2px rgba(0,0,0,0.4);
-  }
-  
-  .animation {
-    height:100px;
-    overflow:hidden;
-    margin-left: 1rem;
-  }
-  
-  .animation > div > div {
 
-    height:6rem;
-   
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: #e0e0d5;
+    /* border: 1px solid #e2e2d7; */
+    perspective: 2000px; /* Remove this if you don't want the 3D effect */
   }
   
-  .animation div:first-child {
-    animation: text-animation 5s infinite;
-  }
-
-  .first div {
-    background-color:#46dd32;
-    
-  }
-  .second div {
-    background-color:#e8eb35;
-  }
-  .third div {
-    background-color:#09eca8;
-  } 
-  
-  @keyframes text-animation {
-    0% {margin-top: 0;}
-    10% {margin-top: 1.8;}
-    20% {margin-top: -6rem;}
-    30% {margin-top: -6rem;}
-    40% {margin-top: -12rem;}
-    60% {margin-top: -12rem;}
-    70% {margin-top: -5.5rem;}
-    80% {margin-top: -5.5rem;}
-    90% {margin-top: 0;}
-    100% {margin-top: 0;}
-  }
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
     text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .w-300
+  {
+    width: 300px !important;
+  }
+  .h-200
+  {
+    height: 200px !important;
   }
   
-  .title {
-    color: grey;
-    font-size: 18px;
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
   }
   
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back ,  .flip-card-back2 {
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
   }
   
-  a {
-    text-decoration: none;
-    font-size: 22px;
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    /* background-color: #bbb; */
+    /* background-color:#c5c5bb; */
     color: black;
   }
   
-  button:hover, a:hover {
-    opacity: 0.7;
+  /* Style the back side */
+  .flip-card-back {
+    /* background-color:rgb(241, 230, 230); */
+    color: rgb(17, 16, 16);
+    transform: rotateY(180deg);
+  }
+  .flip-card-back2 {
+    background-color:rgb(202, 195, 195);
+    color: rgb(22, 20, 20);
+    transform: rotateY(180deg);
   }
 
-
-.cta {
-    display: flex;
-    gap: 1.2rem;
-    justify-content: center;
-    margin-top: 2.5rem;
+  
+.abt-one
+{
+   
+    min-height: auto;
+    
 }
 
-.btn {
-  border: 1px solid #4db5ff;
-  /* border: 1px solid var(--color-primary); */
-  border-radius: 0.4rem;
-  color: #4db5ff;
-  color: var(--color-primary);
-  cursor: pointer;
-  display: inline-block;
-  transition: all .4s ease;
-  transition: var(--transition);
-  width: -webkit-max-content;
-  width: max-content;
+.rendered
+{
+    animation: pulse 5s infinite;
+    
 }
-.btn-primary {
-  background-color: #4db5ff;
-
-}
-
-
-a {
-  transition: all .4s ease;
-  transition: var(--transition);
-}
-.text-light, a, section>h2 {
-  color: #4db5ff;
-  color: var(--color-primary);
-}
-
-.scroll__down {
-  bottom: 5rem;
-  font-size: .9rem;
-  font-weight: 300;
-  position: absolute;
-  right: 5rem;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
+@keyframes pulse {
+    0% {
+      background-color: #001F3F;
+    }
+    100% {
+      background-color: #FF4136;
+    }
+  }

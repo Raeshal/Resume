@@ -7,4 +7,5 @@ import { AboutComponent } from './about/about.component';
 })
 export class AppComponent {
   title = 'Resume';
+  remove:boolean=true
 }

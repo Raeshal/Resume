@@ -8,19 +8,13 @@
 } */
 
  /* ---------------colour for routes------------ */
-.element {
-    background: 
-      radial-gradient(
-        farthest-side at bottom left,
-        rgba(255, 0, 255, 0.5), 
-        transparent
-      ),
-      radial-gradient(
-        farthest-corner at bottom right,
-        rgba(255, 50, 50, 0.5), 
-        transparent 400px
-      );
-  }
+
+.cover{
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  min-height: 100vh;
+ 
+}
 
  
 /* .sidenav
@@ -78,10 +72,8 @@ nav ul li
   padding: 10px;
   margin: 5px 5px;
 }
-.main
-{
-  display: flex;
-}
+
+ 
 .container {
   color: #e5e5e5;
   text-transform: uppercase;
@@ -128,3 +120,34 @@ nav ul li:hover::after
     opacity: 1;
 
 }
+
+.rendered
+{
+  background-size:cover;
+  background: 
+    radial-gradient(
+      farthest-side at bottom left,
+      rgba(10, 8, 10, 0.5), 
+      transparent 
+    ),
+    radial-gradient(
+      farthest-corner at bottom right,
+      rgba(15, 15, 15, 0.5), 
+      transparent 400px
+    );
+
+    animation: pulse 5s infinite;
+
+
+  
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #5f8ebd;
+  }
+  100% {
+    background-color: #cf736e;
+  }
+}
+
