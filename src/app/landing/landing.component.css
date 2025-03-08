@@ -1,76 +1,111 @@
+/* Flip Card Container */
+.flip-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  perspective: 1000px;
+}
 
-
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+/* Flip Card */
 .flip-card {
-    background-color: #e0e0d5;
-    /* border: 1px solid #e2e2d7; */
-    perspective: 2000px; /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .w-300
-  {
-    width: 300px !important;
-  }
-  .h-200
-  {
-    height: 200px !important;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back ,  .flip-card-back2 {
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    /* background-color: #bbb; */
-    /* background-color:#c5c5bb; */
-    color: black;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-    /* background-color:rgb(241, 230, 230); */
-    color: rgb(17, 16, 16);
-    transform: rotateY(180deg);
-  }
-  .flip-card-back2 {
-    background-color:rgb(202, 195, 195);
-    color: rgb(22, 20, 20);
-    transform: rotateY(180deg);
-  }
-
-  
-.abt-one
-{
-   
-    min-height: auto;
-    
+  width: 40rem;
+  height: 25rem;
+  border-radius: 15px;
+  background: transparent;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
 }
 
-.rendered
-{
-    animation: pulse 5s infinite;
-    
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
 }
-@keyframes pulse {
-    0% {
-      background-color: #001F3F;
-    }
-    100% {
-      background-color: #FF4136;
-    }
-  }
+
+/* Front & Back Side */
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Front Side */
+.flip-card-front {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+}
+.flip-card-back {
+  background: #ffffff;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Box */
+.content {
+  max-width: 90%;
+}
+
+/* Title */
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6a11cb;
+  margin-bottom: 10px;
+}
+
+/* Text Styling */
+.description, .experience {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Highlighted Name */
+.highlight {
+  color: #2575fc;
+  font-weight: bold;
+}
+
+/* Resume Download Button */
+.btn-custom {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-custom:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
+/* Flip Effect on Hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}

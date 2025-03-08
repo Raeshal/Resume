@@ -1,12 +1,12 @@
 
-  <div class="flip-card mt-5 container1" >
+  <!-- <div class="flip-card mt-5 container1" >
      <div class="flip-card-inner position-relative  w-300">
        <div class="flip-card-front w-100 position-absolute">
          <h1 class="display-2 text-black mt-5">Who am I?</h1>
        </div>
        <div class="flip-card-back position-absolute container1 m-5" style="background-color: rgb(194, 157, 228); border: solid rgb(28, 14, 216) 2px;">
-        <h4 class="ms-2 me-2 mt-2" style="font-size: larger ;  ">Hello, I'm RAESHAL, an experienced Angular developer with 
-          a passion for crafting elegant and robust web applications. <br> Over the past three years, 
+        <h4 class="ms-2 me-2 mt-2" style="font-size: larger ;">Hello, I'm RAESHAL KHURANA, an experienced Angular developer with 
+          a passion for crafting elegant and robust web applications. <br> Over the past {{years}} years, 
           I've honed my skills in front-end development and have had the opportunity to work on various
           projects that have enriched my expertise in Angular.</h4>  
         
@@ -15,12 +15,32 @@
      </div>
 
      
-   </div>
-
-<!-- <div class="container w-25 h-25">
-   <label> Resume</label>
-     <a  href="../Raeshal Khurana (5).pdf" download class="download-btn">Download
-      <i class="fa fa-download" aria-hidden="true"></i></a>
-    
-</div>
-    -->
+   </div> -->
+   <div class="flip-card-container">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <!-- Front Side -->
+        <div class="flip-card-front">
+          <h1 class="display-2 text-white">Who Am I?</h1>
+        </div>
+  
+        <!-- Back Side -->
+        <div class="flip-card-back">
+          <div class="content">
+            <h4 class="title">👋 Hello, I'm <span class="highlight">Raeshal Khurana</span></h4>
+            <p class="description">
+              💻 Experienced Angular Developer with a passion for building <strong>responsive, dynamic, and elegant</strong> web applications.
+            </p>
+            <p class="experience">
+              📅 With <strong>{{years}}</strong> years of experience, I've worked on diverse projects, refining my expertise in front-end technologies.
+            </p>
+            <a href="assets/Resume.pdf" download class="btn btn-custom">
+              📄 Download My Resume
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  

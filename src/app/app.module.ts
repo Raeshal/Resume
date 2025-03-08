@@ -15,7 +15,6 @@ import { ConnectComponent } from './connect/connect.component';
 
 @NgModule({
   declarations: [
-   
     AppComponent,
     routingComponents,
     AboutComponent,

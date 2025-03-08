@@ -9,14 +9,34 @@
 
  /* ---------------colour for routes------------ */
 
+body 
+{
+ min-height: 100vh;
+ background-color: #524f4a; /* Golden color */
+ background-image:
+ linear-gradient(60deg, rgba(255, 255, 255, 0.8) 15%, transparent 15%) -10px -10px,
+ linear-gradient(60deg, rgba(255, 255, 255, 0.8) 15%, transparent 15%) 10px 10px,
+ linear-gradient(60deg, rgba(255, 255, 255, 0.8) 15%, transparent 15%) 0 20px,
+ linear-gradient(60deg, rgba(255, 255, 255, 0.8) 15%, transparent 15%) 20px 0,
+ linear-gradient(60deg, rgba(255, 255, 255, 0.8) 15%, transparent 15%) 0 40px,
+ linear-gradient(60deg, rgba(255, 255, 255, 0.8) 15%, transparent 15%) 40px 0;
+background-size: 50px 50px;
+background-position: 0 0, 25px 25px, 50px 50px, 75px 75px, 100px 100px, 125px 125px; /* Adjust position as needed */
+animation: sprinkle 2s infinite linear;
+}
+
+@keyframes sprinkle {
+to {
+ background-position: 25px 25px, 50px 50px, 75px 75px, 100px 100px, 125px 125px, 150px 150px;
+}
+}
 .cover{
   display: grid;
   grid-template-columns: 1fr 7fr;
-  min-height: 100vh;
- 
+  /* min-height: 100vh; */
+  /* background-color: white; */
+   
 }
-
- 
 /* .sidenav
 {
   height: 100%;
@@ -67,6 +87,9 @@ nav ul li
 
 .routes
 {
+  height: 100vh; /* Full height */
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -94,7 +117,6 @@ nav ul li
     z-index: 2;
     transition: color 0.5s;
 }
-
 nav ul li::after
 {
     content: ' ';
@@ -108,7 +130,7 @@ nav ul li::after
     transform: translate(-50% , -50%);
     z-index: -1;
     opacity: 0;
-    transition: top 0.5s, opacity 0.5s;
+   
 }
 nav ul li:hover
 {
@@ -118,11 +140,23 @@ nav ul li:hover::after
 {
     top: 50%;
     opacity: 1;
+    
 
+}
+/* Active Class (Keeps the effect after click) */
+nav ul li.active {
+  color: #f44566;
+}
+
+nav ul li.active::after {
+  top: 50%;
+  opacity: 1;
 }
 
 .rendered
 {
+  height: 100vh;
+  overflow-y: auto; /* Enable vertical scrolling */
   background-size:cover;
   background: 
     radial-gradient(
@@ -136,18 +170,55 @@ nav ul li:hover::after
       transparent 400px
     );
 
+
+
+
     animation: pulse 5s infinite;
 
 
   
 }
+/* Optional: Style the scrollbar for better visibility */
+.rendered::-webkit-scrollbar {
+  width: 12px; /* Adjust width of the scrollbar */
+}
 
-@keyframes pulse {
+.rendered::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar color */
+  border-radius: 4px; /* Rounded edges */
+}
+
+.rendered::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovered */
+}
+ @keyframes pulse {
   0% {
-    background-color: #5f8ebd;
+    background-color: #777373;
+  }
+  25%
+  {
+    background-color: #777375;
+
+  }
+  50%{
+
+    background-color: #af8d9e;
+  }
+  75%
+  {
+    background-color: #e281b2;
   }
   100% {
-    background-color: #cf736e;
+    background-color: #4b4a4a;
   }
 }
+ 
+
+
+
+
+
+
+
+
 
